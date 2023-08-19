@@ -74,7 +74,7 @@ class Stream;
 } // namespace android
 
 #define ADDRESS_SPACE_GRAPHICS_DEVICE_ID 0
-#define ADDRESS_SPACE_GRAPHICS_PAGE_SIZE 4096
+#define ADDRESS_SPACE_GRAPHICS_PAGE_SIZE 16384
 #define ADDRESS_SPACE_GRAPHICS_BLOCK_SIZE (16ULL * 1048576ULL)
 
 // AddressSpaceGraphicsContext shares memory with

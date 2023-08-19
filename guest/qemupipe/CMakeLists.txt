@@ -5,6 +5,6 @@ android_validate_sha256("${GOLDFISH_DEVICE_ROOT}/../../../hardware/google/gfxstr
 set(qemupipe_host_src qemu_pipe_common.cpp qemu_pipe_host.cpp)
 android_add_library(TARGET qemupipe_host LICENSE Apache-2.0 SRC qemu_pipe_common.cpp qemu_pipe_host.cpp)
 target_include_directories(qemupipe_host PRIVATE ${GOLDFISH_DEVICE_ROOT}/../../../hardware/google/gfxstream/guest/qemupipe/include ${GOLDFISH_DEVICE_ROOT}/../../../hardware/google/gfxstream/guest/qemupipe/include-types ${GOLDFISH_DEVICE_ROOT}/./../../../hardware/google/gfxstream/guest/iostream/include/libOpenglRender ${GOLDFISH_DEVICE_ROOT}/./../../../hardware/google/gfxstream/guest/include ${GOLDFISH_DEVICE_ROOT}/./../../../external/qemu/android/android-emugl/guest)
-target_compile_definitions(qemupipe_host PRIVATE "-DPLATFORM_SDK_VERSION=29" "-DGOLDFISH_HIDL_GRALLOC" "-DHOST_BUILD" "-DANDROID" "-DGL_GLEXT_PROTOTYPES" "-DPAGE_SIZE=4096" "-DGFXSTREAM" "-DENABLE_ANDROID_HEALTH_MONITOR")
+target_compile_definitions(qemupipe_host PRIVATE "-DPLATFORM_SDK_VERSION=29" "-DGOLDFISH_HIDL_GRALLOC" "-DHOST_BUILD" "-DANDROID" "-DGL_GLEXT_PROTOTYPES" "-DPAGE_SIZE=16384" "-DGFXSTREAM" "-DENABLE_ANDROID_HEALTH_MONITOR")
 target_compile_options(qemupipe_host PRIVATE "-fvisibility=default" "-Wno-unused-parameter")
 target_link_libraries(qemupipe_host PRIVATE android-emu-shared)
